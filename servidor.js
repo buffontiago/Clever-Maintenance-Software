@@ -1,14 +1,38 @@
-//jshint esversion:6
 
 const express = require ("express");
 const app = express();
 
+app.set("view engine", "ejs");
+
 app.use(express.static("public"));
 
-app.get("/", function(require, response){
-  response.sendFile(__dirname + "/index.html" );
-});
+//gera as rotas para acessar as páginas
 
-app.listen(process.env.PORT ||3000, function(){
-  console.log("Servidor iniciou na porta 3000");
+app.get("/", function(req, res){
+  res.render("index");
+})
+
+app.get("/novoUsuario", function(req, res){
+  res.render("novoUsuario");
+})
+
+app.get("/confirmarUsuario", function(req, res){
+  res.render("confirmarUsuario");
+})
+
+app.get("/novaSenha", function(req, res){
+  res.render("novaSenha");
+})
+
+  app.get("/password", function(req, res){
+    res.render("password");
+})
+
+    app.get("/paginaPrincipal", function(req, res){
+      res.render("paginaPrincipal");
+
+})
+
+  app.listen(process.env.PORT ||3000, function(){
+  console.log("Servidor rodando");
 });

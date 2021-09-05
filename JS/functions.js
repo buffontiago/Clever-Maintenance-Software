@@ -1,4 +1,4 @@
-//Funções responsáveis pela tela de login na página index.html
+//Funções responsáveis pela tela de login na página index
 
 function logar() {
   var login = document.getElementById("login");
