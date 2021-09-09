@@ -124,11 +124,11 @@ position: absolute;
 
 
 .vertical-menu a:hover {
-  background-color: #ccc; 
+  background-color: #ccc;
 }
 
 .paginaInicial{
-  background-color: #3C8DAD;
+  background-color: white;
 }
 
 /*configurações da barra de navegação topnav*/
@@ -212,5 +212,112 @@ position: absolute;
     margin-top: 70px;
   width: 50%;
   display: inline-block;
+  margin-left: 50%;
+}
+
+/*___________________ configuração dos botões dropdown_________________________*/
+.dropdown-btn {
+  padding: 12px;
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.dropdown-btn:hover {
+  color: blue;
+  background-color: #ccc;
+}
+
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/*________________________________________ Cadastro de usuários__ cadastrarUsuarioInternal.html_____*/
+
+.conteudoEsquerdoUsuario{
+  padding: 15px;
+  position:absolute;
+  width: 50%;
+}
+
+.conteudoDireitoUsuario{
+  padding: 15px;
+  position:absolute;
+  width: 50%;
+  display: inline-block;
+  margin-left: 50%;
+}
+
+.dataNascimentoTipoUsuario{
+  position:absolute;
+  width: 50%;
+}
+
+/*_____________________________________consulta e edição de usuarios___ consultarEditarUsuarios.html_____*/
+.btn-primary{
+  width: 125px;
+  margin: 10px;
+}
+
+.usuariosCabecalho{
+
+  color: black;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  height: 100%;
+}
+
+.resultadoUsuarios{
+  position:absolute;
+  padding: 15px;
+  width: 90%;
+  height: 370px;
+  background-color:#F1F7E7;
+
+}
+
+.btn-usuarioDireito{
+  width: 90%;
+  position:absolute;
+  display: inline-block;
+  margin-top: 384px;
+}
+
+.celulasUsuarioPesquisado{
+  border: 1px solid lightgray;
+  width: 130px;
+}
+.celulasNomePesquisado{
+  border: 1px solid lightgray;
+  width: 230px;
+}
+
+/*__________________________inventario.html____________________*/
+
+.conteudoEsquerdoInventario{
+  padding: 15px;
+  position:absolute;
+  width: 50%;
+}
+
+.conteudoDireitoInventario{
+  padding: 15px;
+  position:absolute;
+  width: 50%;
   margin-left: 50%;
 }
