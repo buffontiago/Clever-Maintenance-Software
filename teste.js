@@ -1,11 +1,18 @@
-//JShint: esversion6
-
 const express = require ("express");   //definir a função para requerir os modulos do node-express
+const bodyParser = require("body-parser");
 
-const app = express();
+const app = express();              //constante para criar a função express
+
+app.set("view engine", "ejs");       // função para renderizar as views
+
+app.use(express.static("public"));   // função para uzar o CSS e JS
+
+
+//app.use(bodyParser.urlencoded({extended: true}));
+
 
 app.get("/", function(req, res){        //função para renderizar a pagina de login
-  res.send("HELLO WORLD!");
+  res.render("index");
 });
 
 

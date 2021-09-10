@@ -65,4 +65,4 @@ app.get("/inventario", function(req, res){
 
 app.listen(process.env.PORT ||3000, function(){     //função para definir as portas do servidor
 console.log("Servidor rodando");
-})
+});
