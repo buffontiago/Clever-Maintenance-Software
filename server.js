@@ -15,53 +15,53 @@ app.get("/", function(req, res){        //função para renderizar a pagina de l
   res.render("index");
 });
 
-//app.post("/", function(req, res){
-  //var login = req.body.nome;
-  //var password = req.body.senha;
+app.post("/", function(req, res){
+  var login = req.body.nome;
+  var password = req.body.senha;
 
 
-})
+});
 
 app.get("/novoUsuario", function(req, res){
   res.render("novoUsuario");
-})
+});
 
 app.get("/confirmarUsuario", function(req, res){
   res.render("confirmarUsuario");
-})
+});
 
 app.get("/novaSenha", function(req, res){
   res.render("novaSenha");
-})
+});
 
   app.get("/password", function(req, res){
     res.render("password");
-})
+});
 
     app.get("/paginaPrincipal", function(req, res){
       res.render("paginaPrincipal");
 
-})
+});
 
 app.get("/cadastrarUsuárioInternal", function(req, res){
   res.render("cadastrarUsuárioInternal");
 
-})
+});
 
 app.get("/cosultarEditarItensInventario", function(req, res){
   res.render("cosultarEditarItensInventario");
 
-})
+});
 
 app.get("/cosultarEditarItensUsuarios", function(req, res){
   res.render("cosultarEditarItensUsuarios");
 
-})
+});
 
 app.get("/inventario", function(req, res){
   res.render("inventario");
 
-})
+});
 
 app.listen(process.env.PORT ||3000, function(){     //função para definir as portas do servidor
 console.log("Servidor rodando");
