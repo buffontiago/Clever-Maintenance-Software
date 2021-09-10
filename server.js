@@ -1,3 +1,4 @@
+//JShint: esversion 6
 
 const express = require ("express");   //definir a função para requerir os modulos do node-express
 const bodyParser = require("body-parser");
@@ -66,6 +67,6 @@ app.get("/inventario", function(req, res){
 
 
 
-//  app.listen(process.env.PORT ||3000, function(){     //função para definir as portas do servidor
+ app.listen(process.env.PORT ||3000, function(){     //função para definir as portas do servidor
   //console.log("Servidor rodando");
 });
