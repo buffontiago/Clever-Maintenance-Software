@@ -22,25 +22,78 @@
     <!--barra de menu superior></!-->
     <div class="topnav">
       <span class="bemVindo">Bem Vindo ao Clever!</span>
-      <a href="paginaPrincipal.ejs"> <i class="fas fa-house-user"> </i> Página Inicial</a>  <!--alteração do html para ejs
+      <a href="/paginaPrincipal"> <i class="fas fa-house-user"> </i> Página Inicial</a>
       <div class="topnav-right">
         <a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
       </div>
     </div>
 
     <!--barra de menu lateral></!-->
+    <script src="JS/functions.js" type="text/javascript"></script>
+
     <div class="barraLateral">
       <div class="vertical-menu">
         <br>
         <a href="#">Relatórios</a>
-        <a href="#">Ordens de serviço</a>
-        <a href="#">Ordens preventivas</a>
-        <a href="#">Máquinas</a>
-        <a href="#">Usuários</a>
-        <a href="#">Inventário</a>
-        <a href="#">Contate-nos</a>
+        <button class="dropdown-btn">Ordens de serviço
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Criar ordens de serviço</a>
+          <a href="#">Consultar e editar ordens de serviço</a>
+        </div>
+        <button class="dropdown-btn">Ordens preventivas
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Criar ordem preventiva</a>
+          <a href="#">Consultar e editar ordens preventivas</a>
+        </div>
+        <button class="dropdown-btn">Máquinas
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Cadastrar máquinas</a>
+          <a href="#">Consultar e editar máquinas</a>
+          <a href="#">Excluir máquinas</a>
+          <a href="#">Dados de processo</a>
+        </div>
+        <button class="dropdown-btn">Usuários
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="cadastrarUsuarioInternal.html">Cadastrar usuários</a>
+          <a href="consultarEditarUsuarios.html">Consultar e editar usuários</a>
+        </div>
+        <button class="dropdown-btn">Inventário
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="inventario.html">Cadastrar Itens</a>
+          <a href="consultarEditarItensInventario.html">Consultar e editar Itens</a>
+        </div>
+        <a href="#">Contate-nos!</a>
       </div>
     </div>
+
+    <script>
+      /* função para ativar os botões da barra lateral, dropdownbtn*/
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+
 
     <div class="conteudo">
       <div class="conteudoEsquerdo">
@@ -65,16 +118,24 @@
       <div class="conteudoDireito">
         <div id="graficoPizza" style="width:100%;max-width:700px"></div>
         <script>
-        var xArray = ["Ordens Preventivas", "Ordens Corretivas", "Ordens Emergenciais"];
-        var yArray = [55, 49, 44];
-        var layout = {title:"Proporção de ordens abertas no ultimo mês"};
-        var data = [{labels:xArray, values:yArray, type:"pie"}];
-        Plotly.newPlot("graficoPizza", data, layout);
+          var xArray = ["Ordens Preventivas", "Ordens Corretivas", "Ordens Emergenciais"];
+          var yArray = [55, 49, 44];
+          var layout = {
+            title: "Proporção de ordens abertas no ultimo mês"
+          };
+          var data = [{
+            labels: xArray,
+            values: yArray,
+            type: "pie"
+          }];
+          Plotly.newPlot("graficoPizza", data, layout);
         </script>
       </div>
     </div>
 
   </div>
+
+
 
 </body>
 

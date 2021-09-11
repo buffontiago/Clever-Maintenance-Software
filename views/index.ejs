@@ -16,50 +16,50 @@
 
 </head>
 
+
 <body>
 
-  <form class="" action="/>" method="post">
-
-  </form>
-
-  <div class="logo">
+    <div class="logo">
     <h1>Clever</h1>
     <h2>Maintenance Software</h2>
+
   </div>
   <div class="textbox">
+
     <table cellspacing="15">
+
       <tr>
+        <form action="/" method="post">
         <td><label>Login:</label></td>
-
-
-
-
         <td><input type="text" name="nome" value="" id="login" size="40" maxlength="50"></td>
         <td><a href="/confirmarUsuario">Esqueceu usuário?</a></td>
+        </form>
       </tr>
+
       <tr>
+        <form action="/" method="post">
         <td> <label>Password:</label></td>
         <td><input type="password" name="senha" value="" id="password" size="40" maxlength="100" autocomplete="current-password"></td>
         <td><a href="/password">Esqueceu a senha?</a></td>
+        </form>
       </tr>
+
       <tr>
         <td> </td>
         <td> <input type="checkbox" name="check" id="salvar"> <label> Salvar dados?</label> </td>
       </tr>
+
       <tr>
         <td> </td>
         <td> <input class="botoes" type="submit" onclick="logar()" name="acessar" value="Acessar"></td>
       </tr>
+
       <tr>
         <td>Novo usuário?</td>
         <td><a  href="/novoUsuario">Clique aqui</a></td>
       </tr>
 
-
-    </table>
-
-  </form> <!--metodo post para passar os dados-->
-
-</body>
+      </table>
+    </body>
 
 </html>

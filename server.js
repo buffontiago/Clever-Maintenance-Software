@@ -3,8 +3,9 @@ const bodyParser = require("body-parser");
 
 const app = express();              //constante para criar a função express
 
-app.set("view engine", "ejs");       // função para renderizar as views
+app.set("view engine", "ejs");      // função para renderizar as views
 
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));   // função para uzar o CSS e JS
 
 
@@ -40,6 +41,8 @@ app.get("/novaSenha", function(req, res){
 
     app.get("/paginaPrincipal", function(req, res){
       res.render("paginaPrincipal");
+
+
 
 });
 
