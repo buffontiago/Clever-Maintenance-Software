@@ -60,11 +60,10 @@ app.get("/cosultarEditarItensInventario", function(req, res){
 });
 
 
-app.get("/cosultarEditarItensInventario", function(req, res){
-  res.render("cosultarEditarItensInventario");
+app.get("/consultarEditarItensInventario", function(req, res){
+  res.render("consultarEditarItensInventario");
 
 });
-
 
 
 app.get("/inventario", function(req, res){
