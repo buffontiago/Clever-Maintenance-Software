@@ -42,12 +42,15 @@ app.get("/novaSenha", function(req, res){
     app.get("/paginaPrincipal", function(req, res){
       res.render("paginaPrincipal");
 
+});
 
+app.get("/cadastrarUsuarioInternal", function(req, res){
+  res.render("cadastrarUsuarioInternal");
 
 });
 
-app.get("/cadastrarUsuárioInternal", function(req, res){
-  res.render("cadastrarUsuárioInternal");
+app.get("/consultarEditarUsuarios", function(req, res){
+  res.render("consultarEditarUsuarios");
 
 });
 
@@ -56,10 +59,13 @@ app.get("/cosultarEditarItensInventario", function(req, res){
 
 });
 
-app.get("/cosultarEditarItensUsuarios", function(req, res){
-  res.render("cosultarEditarItensUsuarios");
+
+app.get("/cosultarEditarItensInventario", function(req, res){
+  res.render("cosultarEditarItensInventario");
 
 });
+
+
 
 app.get("/inventario", function(req, res){
   res.render("inventario");
