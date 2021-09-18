@@ -286,8 +286,8 @@ position: absolute;
   position:absolute;
   padding: 15px;
   width: 90%;
-  height: 370px;
-  background-color:#F1F7E7;
+  height: 570px;
+  background-color:white;
 
 }
 
@@ -295,7 +295,7 @@ position: absolute;
   width: 90%;
   position:absolute;
   display: inline-block;
-  margin-top: 384px;
+  margin-top: 453px;
 }
 
 .celulasUsuarioPesquisado{
