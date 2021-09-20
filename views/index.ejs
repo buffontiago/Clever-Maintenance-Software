@@ -24,24 +24,26 @@
     <h2>Maintenance Software</h2>
 
   </div>
+
+  <form action="/" method="post">
   <div class="textbox">
 
     <table cellspacing="15">
 
       <tr>
-        <form action="/" method="post">
+
         <td><label>Login:</label></td>
-        <td><input type="text" name="nome" value="" id="login" size="40" maxlength="50"></td>
+        <td><input type="text"class="form-control"name="login" value="" id="login" size="40" maxlength="50"></td>
         <td><a href="/confirmarUsuario">Esqueceu usuário?</a></td>
-        </form>
+
       </tr>
 
       <tr>
-        <form action="/" method="post">
+
         <td> <label>Password:</label></td>
-        <td><input type="password" name="senha" value="" id="password" size="40" maxlength="100" autocomplete="current-password"></td>
+        <td><input type="password"class="form-control" name="password" value="" id="password" size="40" maxlength="100" autocomplete="current-password"></td>
         <td><a href="/password">Esqueceu a senha?</a></td>
-        </form>
+
       </tr>
 
       <tr>
@@ -53,7 +55,7 @@
         <td> </td>
         <td> <input class="botoes" type="submit" onclick="logar()" name="acessar" value="Acessar"></td>
       </tr>
-
+  </form>
       <tr>
         <td>Novo usuário?</td>
         <td><a  href="/novoUsuario">Clique aqui</a></td>
