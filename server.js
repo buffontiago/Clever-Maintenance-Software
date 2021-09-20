@@ -1,7 +1,7 @@
 const express = require ("express");   //definir a função para requerir os modulos do node-express
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const mongoose = require("mongoose");
+//const mongoose = require("mongoose");
 
 const app = express();
 
