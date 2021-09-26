@@ -1,36 +1,36 @@
 //Funções responsáveis pela tela de login na página index.html
 
-function logar() {
-  var login = document.getElementById("login");
-  var password = document.getElementById("password");
-  if (login.value == "admin" && password.value == "admin") {
-    //verificar checkbox para salvar senha e login
-    let checkbox = document.getElementById("salvar");
-    if (checkbox.checked) {
-      salvarDados();
-    }
-    window.location.href = "/paginaPrincipal";//alteração da extenção html para vi
-  } else {
-    login.value = "";
-    password.value = "";
-    alert("Usuario ou senha inválidos");
-  }
-}
+// function logar() {
+//   var login = document.getElementById("login");
+//   var  password = document.getElementById("password");
+//   //if (login.value == "admin" && password.value == "admin") {
+//     //verificar checkbox para salvar senha e login
+//     let checkbox = document.getElementById("salvar");
+//     if (checkbox.checked) {
+//       salvarDados();
+//     }
+//     //window.location.href = "/paginaPrincipal";//alteração da extenção html para vi
+//   } else {
+//     login.value = "";
+//     password.value = "";
+//     alert("Usuario ou senha inválidos");
+//   }
+// }
 
-function salvarDados() {
-  var x = confirm("Deseja salvar senha e login?");
-  if (x == true) {
-    //alteração para salvar senha;
-    var login = document.getElementById("login");
-    var password = document.getElementById("password");
-
-    localStorage.setItem("login", login);
-    localStorage.setItem("password", password);
-    alert("Senha e usuário salvos com sucesso!");
-  } else {
-    alert("Senha e usuários não foram salvos!");
-  }
-}
+// function salvarDados() {
+//   var x = confirm("Deseja salvar senha e login?");
+//   if (x == true) {
+//     //alteração para salvar senha;
+//     var login = document.getElementById("login");
+//     var password = document.getElementById("password");
+//
+//     localStorage.setItem("login", login);
+//     localStorage.setItem("password", password);
+//     alert("Senha e usuário salvos com sucesso!");
+//   } else {
+//     alert("Senha e usuários não foram salvos!");
+//   }
+// }
 
 //Funções da tela de redefinição de senha( password.html) ____________________________________
 // essa função busca um código de forma aleatório do array
